@@ -365,6 +365,7 @@ func launchInstance(machine *machinev1beta1.Machine, machineProviderConfig *mach
 		{
 			DeviceIndex: aws.Int64(machineProviderConfig.DeviceIndex),
 			SubnetId:    subnetID,
+			AssociatePublicIpAddress: aws.Bool(false),
 			Groups:      securityGroupsIDs,
 		},
 	}
